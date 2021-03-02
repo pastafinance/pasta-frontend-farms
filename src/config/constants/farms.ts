@@ -99,6 +99,70 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  {
+    pid: 6,
+    risk: 5,
+    lpSymbol: 'DODO-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x9e642d174b14faea31d842dc83037c42b53236e6',
+    },
+    tokenSymbol: 'DODO',
+    tokenAddresses: {
+      97: '',
+      56: '0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 7,
+    risk: 5,
+    lpSymbol: 'REEF-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x58B58cab6C5cF158f63A2390b817710826d116D0',
+    },
+    tokenSymbol: 'REEF',
+    tokenAddresses: {
+      97: '',
+      56: '0xf21768ccbc73ea5b6fd3c687208a7c2def2d966e',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 8,
+    risk: 5,
+    lpSymbol: 'XVS-BNB LP',
+    lpAddresses: {
+      97: '0xE66790075ad839978fEBa15D4d8bB2b415556a1D',
+      56: '0x41182c32F854dd97bA0e0B1816022e0aCB2fc0bb',
+    },
+    tokenSymbol: 'XVS',
+    tokenAddresses: {
+      97: '0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5',
+      56: '0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 9,
+    risk: 5,
+    lpSymbol: 'HARD-BNB LP',
+    lpAddresses: {
+      97: '0xE66790075ad839978fEBa15D4d8bB2b415556a1D',
+      56: '0x9f40e8a2fcaa267a0c374b6c661e0b372264cc3d',
+    },
+    tokenSymbol: 'HARD',
+    tokenAddresses: {
+      97: '0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5',
+      56: '0xf79037f6f6be66832de4e7516be52826bc3cbcc4',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
 ]
 
 export default farms
