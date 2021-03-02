@@ -62,15 +62,14 @@ const Home: React.FC = () => {
         <Heading as="h1" size="xl" mb="24px" color="secondary">
           {TranslateString(576, 'PASTA Finance')}
         </Heading>
-        <Text style={{ fontSize: 40 }}>We Will be Right Back</Text>
         <Text>{TranslateString(578, 'The only yield farm for pasta lovers.')}</Text>
       </Hero>
       <div>
         <Cards>
-          {/* <FarmStakingCard /> */}
+          <FarmStakingCard />
           <TwitterCard/>
-          {/* <CakeStats /> */}
-          {/* <TotalValueLockedCard /> */}
+          <CakeStats />
+          <TotalValueLockedCard />
         </Cards>
       </div>
     </Page>
