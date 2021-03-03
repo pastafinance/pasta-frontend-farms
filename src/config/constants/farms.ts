@@ -163,6 +163,22 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
+  {
+    pid: 10,
+    risk: 5,
+    lpSymbol: 'PASTA-DODO LP',
+    lpAddresses: {
+      97: '',
+      56: '0xa23B52C017b247169e54499Cc83Cb3F098D450C3',
+    },
+    tokenSymbol: 'PASTA',
+    tokenAddresses: {
+      97: '',
+      56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
+    },
+    quoteTokenSymbol: QuoteToken.PASTA,
+    quoteTokenAdresses: contracts.pasta,
+  },
 ]
 
 export default farms

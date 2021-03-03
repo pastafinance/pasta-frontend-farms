@@ -3,6 +3,10 @@ export default {
     56: '0xAB9D0Fae6eB062F2698C2D429a1BE9185A5D4F6E',
     97: '',
   },
+  pasta: {
+    56: '0xAB9D0Fae6eB062F2698C2D429a1BE9185A5D4F6E',
+    97: '',
+  },
   masterChef: {
     56: '0x60b1bc3B8F753758CaB89d4603BF5C901Dd16EB4',
     97: '',
