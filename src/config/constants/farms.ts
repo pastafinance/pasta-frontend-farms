@@ -35,6 +35,38 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
+    pid: 11,
+    risk: 5,
+    lpSymbol: 'PASTA-CAKE LP',
+    lpAddresses: {
+      97: '',
+      56: '0x6F7B21bA93d99682BD2D6896bc7E183b5692cFc5',
+    },
+    tokenSymbol: 'PASTA',
+    tokenAddresses: {
+      97: '',
+      56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
+    },
+    quoteTokenSymbol: QuoteToken.PASTA,
+    quoteTokenAdresses: contracts.pasta,
+  },
+  {
+    pid: 10,
+    risk: 5,
+    lpSymbol: 'PASTA-DODO LP',
+    lpAddresses: {
+      97: '',
+      56: '0xa23B52C017b247169e54499Cc83Cb3F098D450C3',
+    },
+    tokenSymbol: 'PASTA',
+    tokenAddresses: {
+      97: '',
+      56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
+    },
+    quoteTokenSymbol: QuoteToken.PASTA,
+    quoteTokenAdresses: contracts.pasta,
+  },
+  {
     pid: 2,
     risk: 3,
     lpSymbol: 'BNB-BUSD LP',
@@ -162,22 +194,6 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
-  },
-  {
-    pid: 10,
-    risk: 5,
-    lpSymbol: 'PASTA-DODO LP',
-    lpAddresses: {
-      97: '',
-      56: '0xa23B52C017b247169e54499Cc83Cb3F098D450C3',
-    },
-    tokenSymbol: 'PASTA',
-    tokenAddresses: {
-      97: '',
-      56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
-    },
-    quoteTokenSymbol: QuoteToken.PASTA,
-    quoteTokenAdresses: contracts.pasta,
   },
 ]
 

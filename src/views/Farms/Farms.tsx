@@ -47,6 +47,13 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
+
+  const [pastaOnly, setPastaOnly] = useState(false)
+  
+  const pastaOnlyFarms = activeFarms.filter(
+    (farm) => farm.lpSymbol.startsWith("PASTA"),
+  )
+
   // /!\ This function will be removed soon
   // This function compute the APY for each farm and will be replaced when we have a reliable API
   // to retrieve assets prices against USD
@@ -89,10 +96,13 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
     [bnbPrice, account, cakePrice, ethereum],
   )
 
+// stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}
+// pastaOnly={pastOnly} setPastaOnly={setPastaOnly}
+
   return (
     <Page>
       <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
-        {
+        { 
           tokenMode ?
             TranslateString(10002, 'Stake tokens to earn EGG')
             :
@@ -102,13 +112,16 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
         {TranslateString(10000, 'Deposit Fee will be used to buyback EGG')}
       </Heading>
-      <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/>
+      <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly} pastaOnly={pastaOnly} setPastaOnly={setPastaOnly}/>
       <div>
         <Divider />
         <FlexLayout>
           <Route exact path={`${path}`}>
             {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
           </Route>
+          {/* <Route exact path={`${path}`}>
+            {pastaOnly ? farmsList(pastaOnlyFarms, false) : !farmsList(activeFarms, false)}
+          </Route> */}
           <Route exact path={`${path}/history`}>
             {farmsList(inactiveFarms, true)}
           </Route>
