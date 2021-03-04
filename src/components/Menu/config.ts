@@ -48,6 +48,14 @@ const config: MenuEntry[] = [
         label: "Github",
         href: "https://github.com/pastafinance/",
       },
+      {
+        label: 'CoinGecko',
+        href: 'https://www.coingecko.com/en/coins/pasta-finance',
+      },
+      {
+        label: 'CoinMarketCap',
+        href: 'https://coinmarketcap.com/currencies/pasta-finance/',
+      },
     ],
   },
 
