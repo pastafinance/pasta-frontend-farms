@@ -82,22 +82,22 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.PASTA,
     quoteTokenAdresses: contracts.pasta,
   },
-  // {
-  //   pid: 13,
-  //   risk: 5,
-  //   lpSymbol: 'PASTA-UNI LP',
-  //   lpAddresses: {
-  //     97: '',
-  //     56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
-  //   },
-  //   tokenSymbol: 'PASTA',
-  //   tokenAddresses: {
-  //     97: '',
-  //     56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
-  //   },
-  //   quoteTokenSymbol: QuoteToken.PASTA,
-  //   quoteTokenAdresses: contracts.pasta,
-  // },
+   {
+     pid: 13,
+     risk: 5,
+     lpSymbol: 'PASTA-UNI LP',
+     lpAddresses: {
+       97: '',
+       56: '0xCf7e52aD2dd7A39fA9Df39a3A90c64F799580248',
+     },
+     tokenSymbol: 'PASTA',
+     tokenAddresses: {
+       97: '',
+       56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
+     },
+     quoteTokenSymbol: QuoteToken.PASTA,
+     quoteTokenAdresses: contracts.pasta,
+   },
   {
     pid: 2,
     risk: 3,
