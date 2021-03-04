@@ -46,14 +46,29 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const stakedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
-
-
-  const [pastaOnly, setPastaOnly] = useState(false)
   
   const pastaOnlyFarms = activeFarms.filter(
     (farm) => farm.lpSymbol.startsWith("PASTA"),
+
+  )
+  const busdOnlyFarms = activeFarms.filter(
+    (farm) => farm.lpSymbol.includes("BUSD") 
   )
 
+  const bnbOnlyFarms = activeFarms.filter(
+    (farm) => farm.lpSymbol.includes("BNB") 
+  )
+
+  const stakedBusdOnlyFarms = busdOnlyFarms.filter(
+    (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
+  )
+  const stakedBnbOnlyFarms = bnbOnlyFarms.filter(
+    (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
+  )
+  const stakedPastaOnlyFarms = pastaOnlyFarms.filter(
+    (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
+  )
+  
   // /!\ This function will be removed soon
   // This function compute the APY for each farm and will be replaced when we have a reliable API
   // to retrieve assets prices against USD
@@ -112,18 +127,21 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
         {TranslateString(10000, 'Deposit Fee will be used to buyback EGG')}
       </Heading>
-      <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly} pastaOnly={pastaOnly} setPastaOnly={setPastaOnly}/>
+      <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/>
       <div>
         <Divider />
         <FlexLayout>
           <Route exact path={`${path}`}>
             {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
           </Route>
-          {/* <Route exact path={`${path}`}>
-            {pastaOnly ? farmsList(pastaOnlyFarms, false) : !farmsList(activeFarms, false)}
-          </Route> */}
-          <Route exact path={`${path}/history`}>
-            {farmsList(inactiveFarms, true)}
+          <Route exact path={`${path}/pasta`}>
+          {stakedOnly ? farmsList(stakedPastaOnlyFarms, false) : farmsList(pastaOnlyFarms, false)}
+          </Route>
+          <Route exact path={`${path}/busd`}>
+            {stakedOnly ? farmsList(stakedBusdOnlyFarms, false) : farmsList(busdOnlyFarms, false)}
+          </Route>
+          <Route exact path={`${path}/bnb`}>
+            {stakedOnly ? farmsList(stakedBnbOnlyFarms, false) : farmsList(bnbOnlyFarms, false)}
           </Route>
         </FlexLayout>
       </div>
