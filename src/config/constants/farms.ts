@@ -98,6 +98,38 @@ const farms: FarmConfig[] = [
      quoteTokenSymbol: QuoteToken.PASTA,
      quoteTokenAdresses: contracts.pasta,
    },
+   {
+    pid: 14,
+    risk: 5,
+    lpSymbol: 'PASTA-SUSHI LP',
+    lpAddresses: {
+      97: '',
+      56: '0xcb5346Fe5AdBBF9e8B21B827E1EE91dAD7b73115',
+    },
+    tokenSymbol: 'PASTA',
+    tokenAddresses: {
+      97: '',
+      56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
+    },
+    quoteTokenSymbol: QuoteToken.PASTA,
+    quoteTokenAdresses: contracts.pasta,
+  },
+  /* {
+    pid: 15,
+    risk: 5,
+    lpSymbol: 'PASTA-BAKE LP',
+    lpAddresses: {
+      97: '',
+      56: '',
+    },
+    tokenSymbol: 'PASTA',
+    tokenAddresses: {
+      97: '',
+      56: '0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e',
+    },
+    quoteTokenSymbol: QuoteToken.PASTA,
+    quoteTokenAdresses: contracts.pasta,
+  }, */
   {
     pid: 2,
     risk: 3,
