@@ -59,31 +59,28 @@ const TicketCard: React.FC<CardProps> = ({ isSecondCard = false }) => {
 
   return (
     <StyledCard isSecondCard={isSecondCard}>
-      <CardBody>
-        <CardHeader>
-          <IconWrapper>
-            <TicketRound />
-          </IconWrapper>
-          {lotteryHasDrawn ? (
-            <TicketCountWrapper>
-              <Text fontSize="14px" color="textSubtle">
-                {TranslateString(999, 'Until ticket sale:')}
-              </Text>
-              <Heading size="lg">{timeUntilTicketSale}</Heading>
-            </TicketCountWrapper>
-          ) : (
-            <TicketCountWrapper>
-              <Text fontSize="14px" color="textSubtle">
-                {TranslateString(999, 'Your tickets for this round')}
-              </Text>
-              <Heading size="lg">{ticketsLength}</Heading>
-            </TicketCountWrapper>
-          )}
-        </CardHeader>
-        <TicketActions />
-      </CardBody>
-    </StyledCard>
-  )
+    <CardBody>
+      <CardHeader>
+        <IconWrapper>
+        <img src="/images/ticket.png" alt="SYRUP POOL icon" width={48} height={48} />
+        </IconWrapper>
+        {lotteryHasDrawn ? (
+          <TicketCountWrapper>
+            <Heading size="lg">{timeUntilTicketSale}</Heading>
+          </TicketCountWrapper>
+        ) : (
+          <TicketCountWrapper>
+            <Text fontSize="14px" color="textSubtle">
+              {TranslateString(999, 'Your tickets for this round')}
+            </Text>
+            <Heading size="lg">{ticketsLength}</Heading>
+          </TicketCountWrapper>
+        )}
+      </CardHeader>
+      <TicketActions />
+    </CardBody>
+  </StyledCard>
+)
 }
 
 export default TicketCard

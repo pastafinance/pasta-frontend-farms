@@ -25,11 +25,12 @@ const IconWrapper = styled.div`
 const UnlockWalletCard = () => {
   const TranslateString = useI18n()
 
+
   return (
     <Card isActive>
       <StyledCardBody>
         <IconWrapper>
-          <Ticket />
+        <img src="/images/ticket.png" alt="SYRUP POOL icon" width={48} height={48} />
         </IconWrapper>
         <StyledHeading size="md">{TranslateString(999, 'Unlock wallet to access lottery')}</StyledHeading>
         <UnlockButton />
